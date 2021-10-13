@@ -26,14 +26,14 @@ jobs:
         # repo.
         with:
           project: PkgB
-      # Get coverage.
-      - uses: julia-actions/julia-processcoverage@v1
-        # Where to find source code (usually assumed to be in `src/`)
-        with:
-          directories: PkgB/src
-      - uses: codecov/codecov-action@v1
-        with:
-          file: lcov.info
-      - uses: julia-actions/julia-uploadcoveralls@v1
-        env:
-          COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
+      # FIXME: Get coverage.
+      # - uses: julia-actions/julia-processcoverage@v1
+      #   # Where to find source code (usually assumed to be in `src/`)
+      #   with:
+      #     directories: PkgB/src
+      # - uses: codecov/codecov-action@v1
+      #   with:
+      #     file: lcov.info
+      # - uses: julia-actions/julia-uploadcoveralls@v1
+      #   env:
+      #     COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
